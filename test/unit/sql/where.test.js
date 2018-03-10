@@ -406,16 +406,6 @@ suite(Support.getTestDialectTeaser('SQL'), () => {
       });
     });
 
-    suite('$raw', () => {
-      test('should fail on $raw', () => {
-        expect(() => {
-          sql.whereItemQuery('rank', {
-            $raw: 'AGHJZ'
-          });
-        }).to.throw(Error, 'The `$raw` where property is no longer supported.  Use `sequelize.literal` instead.');
-      });
-    });
-
     suite('$like', () => {
       testsql('username', {
         $like: '%swagger'
