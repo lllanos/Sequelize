@@ -3,8 +3,6 @@
 const Support   = require(__dirname + '/../support'),
   DataTypes = require(__dirname + '/../../../lib/data-types'),
   util = require('util'),
-  chai = require('chai'),
-  expect = chai.expect,
   expectsql = Support.expectsql,
   current = Support.sequelize,
   sql = current.dialect.QueryGenerator;
